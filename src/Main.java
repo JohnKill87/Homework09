@@ -44,11 +44,14 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
         int[] arr = generateRandomArray();
+        double avr;
         int sum = 0;
-        for (double index = 0; index < arr.length - 16; index++) {
-            sum = sum + arr[(int)index];
+        for (int index = 0; index < arr.length; index++) {
+            sum = sum + arr[index];
         }
-        System.out.println("Средняя сумма трат за месяц составила " + sum + " рублей");
+        int days = arr.length;
+        avr = (double) sum / days;
+        System.out.println("Средняя сумма трат за месяц составила " + avr + " рублей");
     }
 
     public static void task4() {
